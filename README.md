@@ -1,4 +1,4 @@
-<img width="466" height="128" alt="image" src="https://github.com/user-attachments/assets/ae1670a9-1584-4c37-b497-1992e17f5a4d" />Global Explorer — REST Countries Dashboard
+Global Explorer — REST Countries Dashboard
 
 
 A responsive web application built to explore global country data using the REST Countries API. The application uses field-specific filtering (name, flags, population, region, capital) to minimize payload size, reduce unnecessary network overhead, and improve client-side performance.
@@ -26,6 +26,8 @@ Smart Filtering: Advanced filtering system categorized by regional domains.
 
 Resilience: Integrated skeleton loading states to handle network latency gracefully.
 
+
+
 📦 Deployment & Execution
 Prerequisites
 Node.js (v18+)
@@ -48,11 +50,3 @@ npm run dev
 🏗️ Project Structure
 Plaintext
 <img width="466" height="128" alt="image" src="https://github.com/user-attachments/assets/8bc9c161-ca59-4c12-a609-4b07349d5977" />
-
-src/
-├── api/ # Axios instance and API configuration
-├── assets/ # Project branding and static media
-├── components/ # Atomic UI components
-├── hooks/ # Custom API data-fetching and state logic
-├── App.jsx # Application lifecycle and core state engine
-└── main.jsx # Entry point and initialization
