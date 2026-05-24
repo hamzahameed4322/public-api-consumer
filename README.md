@@ -1,4 +1,6 @@
 Global Explorer — REST Countries Dashboard
+
+
 A responsive web application built to explore global country data using the REST Countries API. The application uses field-specific filtering (name, flags, population, region, capital) to minimize payload size, reduce unnecessary network overhead, and improve client-side performance.
 
 🚀 Live Demo
