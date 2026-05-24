@@ -13,11 +13,15 @@ export const useCountries = () => {
         setLoading(true);
         setError(null);
         
-        // Pure world ka data lane ke liye endpoint
-        const response = await axiosInstance.get('/all');
+        // Breaking Change Fixed: Appending specified fields to filter the API payload
+        const response = await axiosInstance.get('/all', {
+          params: {
+            fields: 'name,flags,population,region,capital,cca3'
+          }
+        });
+        
         setCountries(response.data);
       } catch (err) {
-        // Safe error profiling
         const errorMessage = err.response?.data?.message || 'Failed to fetch country data';
         setError(errorMessage);
         toast.error(`Network Error: ${errorMessage}`);
