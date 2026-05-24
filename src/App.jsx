@@ -7,6 +7,7 @@ import CountryGrid from './components/CountryGrid';
 import Pagination from './components/Pagination';
 import ErrorMessage from './components/ErrorMessage';
 import { Toaster, toast } from 'react-hot-toast';
+import Footer from './components/Footer';
 
 function App() {
   const { countries, loading, error } = useCountries();
@@ -108,9 +109,12 @@ function App() {
                 indexOfLastItem={indexOfLastItem}
               />
             )}
+
           </>
         )}
+         <Footer />
       </div>
+     
     </div>
   );
 }

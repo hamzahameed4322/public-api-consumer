@@ -1,16 +1,55 @@
-# React + Vite
+Global Explorer — REST Countries Dashboard
+A responsive web application built to explore global country data using the REST Countries API. The application uses field-specific filtering (name, flags, population, region, capital) to minimize payload size, reduce unnecessary network overhead, and improve client-side performance.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Live Demo
+https://global-explorer-data.netlify.app/
 
-Currently, two official plugins are available:
+🛠️ Technical Architecture
+Framework: React.js (Vite)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+UI System: Tailwind CSS + DaisyUI for component-driven design.
 
-## React Compiler
+Networking: Axios (with field-specific API constraints)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Icons: Lucide React
 
-## Expanding the ESLint configuration
+Feedback:React Hot Toast for non-intrusive, real-time UI notifications.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+⚡ Core Functionality
+Data Optimization: API requests are limited to essential fields (name, flags, population, region, capital) to minimize network overhead and memory usage.
+
+Search Optimization: Implemented 400ms debouncing to prevent excessive API calls.
+
+Smart Filtering: Advanced filtering system categorized by regional domains.
+
+Resilience: Integrated skeleton loading states to handle network latency gracefully.
+
+📦 Deployment & Execution
+Prerequisites
+Node.js (v18+)
+
+Setup Instructions
+Clone the repository:
+
+Bash
+git clone https://github.com/hamzahameed4322/public-api-consumer
+cd public-api-consumer
+Install dependencies:
+
+Bash
+npm install
+Launch the app:
+
+Bash
+npm run dev
+
+🏗️ Project Structure
+Plaintext
+
+src/
+├── api/ # Axios instance and API configuration
+├── assets/ # Project branding and static media
+├── components/ # Atomic UI components
+├── hooks/ # Custom API data-fetching and state logic
+├── App.jsx # Application lifecycle and core state engine
+└── main.jsx # Entry point and initialization
