@@ -16,7 +16,7 @@ export const useCountries = () => {
         // Breaking Change Fixed: Appending specified fields to filter the API payload
         const response = await axiosInstance.get('/all', {
           params: {
-            fields: 'name,flags,population,region,capital,cca3'
+            fields: 'name,flags,population,region,capital'
           }
         });
         
